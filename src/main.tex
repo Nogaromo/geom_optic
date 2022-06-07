@@ -1,0 +1,143 @@
+\documentclass[a4paper]{article}
+\usepackage[14pt]{extsizes} % для того чтобы задать нестандартный 14-ый размер шрифта
+\usepackage{amsmath}
+\usepackage[unicode, pdftex]{hyperref}
+\usepackage[usenames]{color}
+\usepackage[warn]{mathtext}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english, russian]{babel}
+\usepackage{amsfonts}
+\usepackage[left=20mm, top=15mm, right=15mm, bottom=15mm, nohead, footskip=10mm]{geometry} % настройки полей документа
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{placeins}
+\usepackage{float}
+\usepackage{ucs}
+\begin{document}
+\author{Горяной Егор}
+\date{7 июня 2022}
+\title{Отчет по лабораторной работе "Геометрическая оптика"}
+\maketitle
+
+
+\section{Определение фокусного расстояния линзы}
+Определим фокусное расстояние двумя способами:
+\begin{enumerate}
+    \item С помощью зеркала
+    \item С помощью экрана
+    \item С помощью метода Аббе
+\end{enumerate}
+\subsection{Способ 1}
+Согласно формуле тонкой линзы:
+\begin{equation}\label{eq1}
+\frac{1}{F}=\frac{1}{d}+\frac{1}{f}
+\end{equation}
+В нашем случае $d=F$, тогда $f\to\infty$.\\
+Таким образом, после выхода из линзы получим плоский волновой фронт. При отражении от зеркала и повторном прохождении
+ через линзу, мы снова попадем в фокальную плоскость линзы, только изображение прдемета окажется перевернутым.\\
+Соберем установку:\\
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=15cm, height=5cm]{IMG_20220603_132124.jpg}
+    \caption{Установка с зеркалом}
+\end{figure}
+Тогда, получим, что $F=15$ см.
+\subsection{Способ 2}
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.5]{ris.png}
+    \caption{Рисунок установки}
+\end{figure}
+Запишем систему уравнений:\\
+\begin{equation*}
+ \begin{cases}
+   \frac{1}{F}=\frac{1}{d}+\frac{1}{f}~~~(1)
+   \\
+   \frac{1}{F}=\frac{1}{d'}+\frac{1}{f'}~~~(2)
+   \\
+    d+f=d'+f'=L~~~(3)
+   \\
+    d-d'=l~~~(4)
+ \end{cases}
+\end{equation*}
+Приравнивая (1) и (2), а также используя, что $f+d=f'+d'$, получим: $fd=f'd'$\\
+Подставим (4) в (3):\\
+$f+d=f'+d-l\Longrightarrow f'-f=l$\\
+Возведем (3) в квадрат, а также используем, что $fd=f'd'$:\\
+$(d-d')(d+d')=(f'-f)(f'+f)$\\
+Подставим ранее полученные равенства $d-d'=l,~f'-f=l$:\\
+Получим ещё одно вспомогательное соотношение на расстояния:\\
+$d+d'=f'+f$\\
+Сложим его с (3):\\
+$2d+d'+f=2f'+f+d'$\\
+Откуда получим, что:\\
+$f'=d$\\
+Подставим это в $fd=f'd'$:\\
+$d'=f$\\
+\pagebreak\\
+Тогда получили такие соотношения:\\
+\begin{equation*}
+ \begin{cases}
+   f'=d~~~(5)\\
+   d'=f~~~(6)
+ \end{cases}
+\end{equation*}
+Подставим (6) в (4):\\
+\begin{equation*}
+ \begin{cases}
+   f=d-l\\
+   f+d=L
+ \end{cases}
+\end{equation*}
+Из данной системы  получаем:\\
+\begin{equation*}
+ \begin{cases}
+   f=\frac{L-l}{2}\\
+   d=\frac{L+l}{2}
+ \end{cases}
+\end{equation*}
+Подставим в (1) и выразим $F$:\\
+$$F=\displaystyle\frac{L^2-l^2}{4L}$$
+Соберем установку:\\
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=16cm, height=9cm]{IMG_20220603_132916.jpg}
+    \caption{Установка с экраном}
+\end{figure}
+\\
+\\
+Запишем измерения:\vfill
+\\
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+ $l$, см & $L$, см & $F$, см\\ \hline
+ 33.5&  74.8& 14.8\\ \hline
+ 46&  85.5& 15.2\\ \hline
+ 63&  100& 15.1\\ \hline
+\end{tabular}
+\quad Усредняя $F$: $F_{mean}=15$ см. \\
+\subsection{Метод Аббе}
+$$ \beta_1=\frac{y_1}{y}=\frac{F}{x_1},~\beta_2=\frac{y_2}{y}=\frac{F}{x_2} $$
+Тогда разность расстояний от предмета до фокуса:\\
+\\
+$\Delta x=x_2-x_1=F(\frac{1}{\beta_1}-\frac{1}{\beta_2})\Longrightarrow$
+$$\Longrightarrow F=\displaystyle\frac{\Delta x}{
+    \displaystyle\frac{1}{\beta_2}-\displaystyle\frac{1}{\beta_1}}$$
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.08]{IMG_20220603_142130.jpg}
+    \caption{Установка по методу Аббе}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.12]{IMG_20220603_142150.jpg}
+    \caption{Увеличение изображения}
+\end{figure}\\
+\pagebreak\\
+\hfill\\
+$\Delta x=1.6$ см, $\beta_1=6.5,~\beta_2=3$\\
+\\
+Тогда $F\approx14.1$ см.\\
+
+\end{document}
