@@ -139,5 +139,70 @@ $$\Longrightarrow F=\displaystyle\frac{\Delta x}{
 $\Delta x=1.6$ см, $\beta_1=6.5,~\beta_2=3$\\
 \\
 Тогда $F\approx14.1$ см.\\
-
+\section{Определение фокусного расстояния системы линз}
+В общем случае фокусное расстояние системы линз не равно просто сумме фокусных расстояний каждой линзы. Для того, чтобы
+найти фокусное расстояние системы воспользуемся матрицами линз.\\
+\\
+\begin{pmatrix}
+    1 & 0\\
+    -\frac{1}{F} & 1
+\end{pmatrix}
+=
+\begin{pmatrix}
+    1 & 0\\
+    -\frac{1}{F_2} & 1
+\end{pmatrix}
+\begin{pmatrix}
+    1 & l\\
+    0 & 1
+\end{pmatrix}
+\begin{pmatrix}
+    1 & 0\\
+    -\frac{1}{F_1} & 1
+\end{pmatrix}
+=
+\begin{pmatrix}
+    1-\frac{l}{F_1} & l\\
+    -(\frac{1}{F_1}+\frac{1}{F_2}-\frac{l}{F_1F_2}) & 1-\frac{l}{F_2}
+\end{pmatrix}
+\\
+\\
+Тогда эквивалентное фокусное расстояние системы линз равно:
+$$ \displaystyle\frac{1}{F}=\displaystyle\frac{1}{F_1}+\displaystyle\frac{1}{F_2}-\displaystyle\frac{l}{F_1F_2}~~~(7)$$
+Измерим фокусное расстояние методом Аббе:\\
+\\
+$\Delta x=3$ см, $\beta_1=1.5,~\beta_2=2.2$\\
+Тогда $F\approx14.1$ см.\\
+\\
+Фокусные расстояния линз соответственно равны $F_1=$19 см, $F_1=$30 см, расстояние между линзами $l=$8 см
+Тогда по формуле (7):\\
+$F\approx13.9$ см\\
+\section{Определение углового увеличения телескопа}
+По определению угловое увеличение телескопа определяется следующим образом:
+$$ \gamma=\displaystyle\frac{\tg\varphi_1}{\tg\varphi_2} $$
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.9]{tele_1.png}
+    \caption{Схема телескопа (1)}
+\end{figure}\\
+Из рис.6 видно, что $\gamma=\frac{f_1}{f_2}$\\
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=1]{tele_2.png}
+    \caption{Схема телескопа (2)}
+\end{figure}\\
+\hfill\\
+Из рис.7 видно, что $\gamma=\frac{D_1}{D_2}$\\
+\\
+Соберём установку:\\
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.08]{IMG_20220603_142947.jpg}
+    \caption{Увеличение предмета}
+\end{figure}\\
+Угловое увеличение, измеренное по фокусам равно:\\
+    $$\gamma\approx1.8$$
+Через телескоп смотрим на количество видимых полос через трубу и без. В нашем случае $N_1=6,~N_2=3$\\
+Угловое увеличение:\\
+    $$\gamma=2$$
 \end{document}
